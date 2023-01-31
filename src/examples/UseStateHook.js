@@ -10,12 +10,12 @@ const UseStateHook = () => {
     // const [count, setCount] = useState(computeInitialState());
     // Правильно, computeInitialState будет вызван только при первом рендеринге
     const [count, setCount] = useState(() => computeInitialState());
-
+    // Создаём переменную состояния объект
     const [user, setUser] = useState({
         name: "Толик",
         age: 20
     })
-
+    // Обновить объект
     const updateName = () => {
         setUser({ ...user, name: "Петя" })
 
@@ -26,7 +26,7 @@ const UseStateHook = () => {
             }
         })
     }
-
+    // Создаём переменную состояния массив с объектами
     const [users, setUsers] = useState([
         {
             id: 1,
