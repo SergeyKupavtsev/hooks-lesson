@@ -4,11 +4,11 @@ import React, { useEffect, useMemo, useState } from 'react';
 function lazyCompute(num) {
   console.log('lazyCompute')
   let i = 0
-  while (i < 9999999999999) i++
+  while (i < 99999) i++
   return num * 2
 }
 
-const useMemoHook = () => {
+const UseMemoHook = () => {
   const [number, setNumber] = useState(42)
   const [colored, setColored] = useState(false)
 
@@ -34,4 +34,4 @@ const useMemoHook = () => {
   )
 };
 
-export default useMemoHook;
+export default UseMemoHook;
