@@ -7,7 +7,7 @@ function computeInitialState() {
 }
 const UseStateHook = () => {
     // НЕПРАВИЛЬНО, computeInitialState будет вызываться при каждом setCount
-    // const [count, setCount] = useState(computeInitialState());
+    //const [count, setCount] = useState(computeInitialState());
     // Правильно, computeInitialState будет вызван только при первом рендеринге
     const [count, setCount] = useState(() => computeInitialState());
     // Создаём переменную состояния объект
@@ -66,14 +66,14 @@ const UseStateHook = () => {
         }));
     }
 
+
     const add = () => {
-        // Правильное применение
-        setCount((prevState) => {
+        setCount(prevState => {
             return prevState + 1;
-        })
-        setCount((prevState) => {
+        });
+        setCount(prevState => {
             return prevState + 1;
-        })
+        });
     }
 
     const remove = () => {
