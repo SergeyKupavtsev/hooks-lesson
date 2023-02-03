@@ -2,7 +2,9 @@ import UseEffectHook from './examples/UseEffectHook';
 import UseMemoHook from './examples/UseMemoHook';
 import UseRefHook from './examples/UseRefHook';
 import UseStateHook from './examples/UseStateHook';
+import UseCallbackHook from './examples/UseCallbackHook';
 import logo from './logo.svg';
+import CustomHooks from './examples/CustomHooks';
 
 function App() {
   return (
@@ -10,7 +12,9 @@ function App() {
       {/* <UseStateHook /> */}
       {/* <UseEffectHook /> */}
       {/* <UseRefHook /> */}
-      <UseMemoHook />
+      {/* <UseMemoHook /> */}
+      {/* <UseCallbackHook /> */}
+      <CustomHooks />
     </div>
   );
 }

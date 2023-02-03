@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import ForwardRefInput from './ForwardRefInput';
 
 const UseRefHook = () => {
     const ref = useRef(null);
@@ -67,7 +68,10 @@ const UseRefHook = () => {
                 <button style={{ marginTop: 10, width: 100 }} onClick={handleStopClick}>Пауза</button>
             </div>
             <h3>Ввод данных</h3>
-            <input ref={inputRef} type="text" onChange={(e) => setValue(e.target.value)} value={value} />
+            {/* <input ref={inputRef} type="text" onChange={(e) => setValue(e.target.value)} value={value} /> */}
+
+            <h3>Компонент input</h3>
+            <ForwardRefInput value={value} setValue={setValue} ref={inputRef} />
             <br />
             <button style={{ marginTop: 10, marginRight: 5 }} onClick={focus}>Фокус на вводе</button>
             <button style={{ marginTop: 10 }} onClick={blur}>Убрать фокус</button>
